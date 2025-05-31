@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wizard Guessing Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img id="wizard" src="R (9).png" alt="Wizard Character">
+  <div class="stars"></div>
+
+  <div class="game-container">
+    <h1>🔮 Guess the Wizard's Number!</h1>
+    <p class="subtitle">Pick a number between 1 and 100</p>
+    <p>Turns remaining: <span id="turns">5</span></p>
+
+    <input type="number" id="userGuess" min="1" max="100" placeholder="Enter your guess" />
+    <button onclick="checkGuess()">Submit</button>
+    <button onclick="restartGame()" class="restart">🔄 Restart</button>
+    <button id="hintBtn" onclick="showHint()" style="display: none;">🧠 Get Hint</button>
+
+    <p id="message"></p>
+  </div>
+
+  <audio id="correctSound" src="https://www.soundjay.com/button/sounds/button-4.mp3"></audio>
+  <audio id="wrongSound" src="https://www.soundjay.com/button/sounds/button-10.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
